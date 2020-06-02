@@ -11,10 +11,11 @@
 <meta property="og:description" content="Solving a Kaggle competition" />
 <link rel="canonical" href="https://manycoding.github.io/fastpages/2020/05/29/Practical-Deep-Learning-in-Life-Plants.html" />
 <meta property="og:url" content="https://manycoding.github.io/fastpages/2020/05/29/Practical-Deep-Learning-in-Life-Plants.html" />
+<meta property="og:image" content="https://manycoding.github.io/fastpages/images/rust.jpg" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-05-29T00:00:00-05:00" />
 <script type="application/ld+json">
-{"mainEntityOfPage":{"@type":"WebPage","@id":"https://manycoding.github.io/fastpages/2020/05/29/Practical-Deep-Learning-in-Life-Plants.html"},"description":"Solving a Kaggle competition","@type":"BlogPosting","url":"https://manycoding.github.io/fastpages/2020/05/29/Practical-Deep-Learning-in-Life-Plants.html","headline":"Practical Deep Learning in Life - Plant Pathology 2020","dateModified":"2020-05-29T00:00:00-05:00","datePublished":"2020-05-29T00:00:00-05:00","@context":"https://schema.org"}</script>
+{"mainEntityOfPage":{"@type":"WebPage","@id":"https://manycoding.github.io/fastpages/2020/05/29/Practical-Deep-Learning-in-Life-Plants.html"},"description":"Solving a Kaggle competition","@type":"BlogPosting","url":"https://manycoding.github.io/fastpages/2020/05/29/Practical-Deep-Learning-in-Life-Plants.html","headline":"Practical Deep Learning in Life - Plant Pathology 2020","dateModified":"2020-05-29T00:00:00-05:00","datePublished":"2020-05-29T00:00:00-05:00","image":"https://manycoding.github.io/fastpages/images/rust.jpg","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/fastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://manycoding.github.io/fastpages/feed.xml" /><link rel="shortcut icon" type="image/x-icon" href="/fastpages/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Practical Deep Learning in Life - Plant Pathology 2020</title>
@@ -25,10 +26,11 @@
 <meta property="og:description" content="Solving a Kaggle competition" />
 <link rel="canonical" href="https://manycoding.github.io/fastpages/2020/05/29/Practical-Deep-Learning-in-Life-Plants.html" />
 <meta property="og:url" content="https://manycoding.github.io/fastpages/2020/05/29/Practical-Deep-Learning-in-Life-Plants.html" />
+<meta property="og:image" content="https://manycoding.github.io/fastpages/images/rust.jpg" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-05-29T00:00:00-05:00" />
 <script type="application/ld+json">
-{"mainEntityOfPage":{"@type":"WebPage","@id":"https://manycoding.github.io/fastpages/2020/05/29/Practical-Deep-Learning-in-Life-Plants.html"},"description":"Solving a Kaggle competition","@type":"BlogPosting","url":"https://manycoding.github.io/fastpages/2020/05/29/Practical-Deep-Learning-in-Life-Plants.html","headline":"Practical Deep Learning in Life - Plant Pathology 2020","dateModified":"2020-05-29T00:00:00-05:00","datePublished":"2020-05-29T00:00:00-05:00","@context":"https://schema.org"}</script>
+{"mainEntityOfPage":{"@type":"WebPage","@id":"https://manycoding.github.io/fastpages/2020/05/29/Practical-Deep-Learning-in-Life-Plants.html"},"description":"Solving a Kaggle competition","@type":"BlogPosting","url":"https://manycoding.github.io/fastpages/2020/05/29/Practical-Deep-Learning-in-Life-Plants.html","headline":"Practical Deep Learning in Life - Plant Pathology 2020","dateModified":"2020-05-29T00:00:00-05:00","datePublished":"2020-05-29T00:00:00-05:00","image":"https://manycoding.github.io/fastpages/images/rust.jpg","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
@@ -156,7 +158,7 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="The-Competition">The Competition<a class="anchor-link" href="#The-Competition"> </a></h2><p>Let's jump in one of the most practical things for Deep Learning - paid Kaggle competitions. I'll share my solution to <a href="https://www.kaggle.com/c/plant-pathology-2020-fgvc7">Plant Pathology 2020 - FGVC7</a> which put me in <a href="https://www.kaggle.com/manyregression/competitions">top 23%</a>.</p>
 <p>The goal is to build a model which predicts if tree leaves are healthy, have scab, rust or a combination. It made me wonder why so few classes - I'm sure there are much more diseases than just 2. For a given photo like this we have to predict one label:
-<img src="https://storage.googleapis.com/kagglesdsdata/competitions%2F18648%2F1026645%2Fimages%2FTest_0.jpg?GoogleAccessId=databundle-worker-v2@kaggle-161607.iam.gserviceaccount.com&amp;Expires=1590894919&amp;Signature=WY2A5oYlNR97uVLrhUZxl%2Fp%2BW%2FpwXEM%2BD1QBhbrQ%2B%2BIAQRUQ7Ms8fp8dvafkK4TWiY9ECOo5WLqzOgWPL0ATj5mQ2uQREZT44YanCrOwgVbQXyZz7CdturwwUPkBi6q%2FVqLUVycxISq2HeX4WM3A5bvLztRnXXUY4orjdLRYio36wqGaXcSQIho8AHiYGzng0dvkyRbMKVx%2BLJopy1%2FoQqOJotirFva4Xt3iEoRoG8WUWqI960KBxctpG9pIoBcGV0IFXM3a3tvxgDBIUPNv6wBC53QEniwKxEmVMHLJ0Nu5g8t9RpmFAD2PeKmmnQZa4xtnszdSKObOSW0tn03Prw%3D%3D" alt="alt text" />rust</p>
+<img src="/fastpages/images/copied_from_nb/rust.jpg" alt="rust" /></p>
 
 </div>
 </div>
